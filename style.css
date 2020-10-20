@@ -1,0 +1,131 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#stopwatch {
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 5em;
+  border: .6em solid #999;
+  background: #333333;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+#stopwatch h1 {
+  font-size: 5em;
+  color: #ffe100;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  margin-left: -3.4em;
+}
+#watch_wrap {
+  display: inline-block;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #00C9FF 0%, #92FE9D 100%);
+  padding: .5em;
+  border-radius: 50%;
+  background: linear-gradient(-45deg, rgb(255, 111, 207), rgb(0, 166, 255), rgb(0, 255, 26));
+  background-size: 200% 200%;
+  animation: gradient 10s ease infinite;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin-left: -18em;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+#stopwatch p {
+  font-family: "Lucida Console", monospace, sans-serif;
+  font-size: 6em;
+  color: #666;
+  background: beige;
+  line-height: 6em;
+  height: 6em;
+  width: 6em;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+#watch_reset_btn {
+  display: block;
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  margin-left: -3.4em;
+}
+#watch_reset_btn button {
+  display: inline-block;
+  color: #fff;
+  font-size: 2.5em;
+  margin: 1em 0;
+}
+#watch_ctrl_btn {
+  display: block;
+  position: absolute;
+  top: 86%;
+  left: 50%;
+  margin-left: -3.4em;
+}
+#watch_ctrl_btn i {
+  padding: .3em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.blinking{
+  animation: blinkingText 1.5s infinite;
+}
+@keyframes blinkingText{
+  0%{		color: #666;	}
+  50%{	color: transparent;	}
+  100%{	color: #666;	}
+}
+.btn_hide {
+  display: none;
+}
+.btn_vis_hide {
+  visibility: hidden;
+}
+
+@media (min-width: 1080px) {
+  /* CSS that should be displayed if width is more than 800px goes here */
+  #stopwatch h1 {
+    top: 2%;
+  }
+  #watch_wrap {
+    top: 14%;
+  }
+  #watch_reset_btn {
+    top: 75.5%;
+    margin-left: -2.9em;
+  }
+  #watch_reset_btn button {
+    font-size: 2em;
+    margin: 1em 0;
+  }
+  #watch_ctrl_btn {
+    top: 86%;
+    margin-left: -2.2em;
+  }
+  #watch_ctrl_btn i {
+    padding: .3em;
+    font-size: 3.5em;
+    border-radius: 50%;
+  }
+  #watch_ctrl_btn i:hover {
+    cursor: pointer;
+  }
+}
